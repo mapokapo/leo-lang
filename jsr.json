@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "exports": {
     ".": "./src/mod.ts",
-    "./machine": "./src/machine.ts",
+    "./machine": "./src/Machine.ts",
     "./operations": "./src/operations.ts",
     "./operationDefinitions": "./src/operations/index.ts",
     "./types": "./src/types/index.ts",
