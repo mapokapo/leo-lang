@@ -1,7 +1,7 @@
 import { parseOperation, validateOperation } from "./operations";
 import type Operation from "./types/Operation";
 
-export function parseProgram(programText: string) {
+export function parseProgram(programText: string): Operation[] {
   const operations: Operation[] = [];
   const lines = programText.split("\n");
 

@@ -16,7 +16,7 @@ export default class Machine {
     this.operations = operations;
   }
 
-  public execute() {
+  public execute(): boolean {
     if (this.pc >= this.operations.length) {
       return true;
     }
@@ -38,31 +38,31 @@ export default class Machine {
     return false;
   }
 
-  public setRegister(register: Register, value: number) {
+  public setRegister(register: Register, value: number): void {
     this.registers[register] = value;
   }
 
-  public getRegister(register: Register) {
+  public getRegister(register: Register): number {
     return this.registers[register];
   }
 
-  public setMemory(address: number, value: number) {
+  public setMemory(address: number, value: number): void {
     this.memory[address] = value;
   }
 
-  public getMemory(address: number) {
+  public getMemory(address: number): number {
     return this.memory[address];
   }
 
-  public setFlag(flag: keyof typeof this.flags, value: boolean) {
+  public setFlag(flag: keyof typeof this.flags, value: boolean): void {
     this.flags[flag] = value;
   }
 
-  public getFlag(flag: keyof typeof this.flags) {
+  public getFlag(flag: keyof typeof this.flags): boolean {
     return this.flags[flag];
   }
 
-  public jumpToLabel(label: string) {
+  public jumpToLabel(label: string): void {
     const index = this.operations.findIndex(op => op.label === label) - 1;
 
     if (index < 0) {
@@ -72,11 +72,11 @@ export default class Machine {
     this.pc = index;
   }
 
-  public stop() {
+  public stop(): void {
     this.pc = this.operations.length;
   }
 
-  public restart() {
+  public restart(): void {
     this.pc = 0;
     this.registers = [0, 0, 0, 0, 0, 0, 0, 0];
     this.memory = new Array(256).fill(0);
@@ -86,7 +86,7 @@ export default class Machine {
     };
   }
 
-  public printRegisterTable() {
+  public printRegisterTable(): void {
     console.log("Registers:");
     console.log("----------");
     for (let i = 0; i < this.registers.length; i++) {
@@ -94,7 +94,7 @@ export default class Machine {
     }
   }
 
-  public printFlagTable() {
+  public printFlagTable(): void {
     console.log("Flags:");
     console.log("------");
     for (const flag in this.flags) {
@@ -103,7 +103,7 @@ export default class Machine {
   }
 
   // Prints the memory as an 16x16	table
-  public printMemoryTable() {
+  public printMemoryTable(): void {
     const binaryOnly = this.memory.every(value => value === 0 || value === 1);
 
     console.log("Memory:");
