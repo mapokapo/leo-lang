@@ -1,0 +1,35 @@
+{
+  "name": "leo-lang",
+  "description": "A simple ARM-inspired programming language",
+  "author": "mapokapo <leopetrovic11@gmail.com>",
+  "license": "MIT",
+  "version": "0.0.1",
+  "module": "mod.ts",
+  "type": "module",
+  "files": [
+    "src/mod.ts",
+    "src/Machine.ts",
+    "src/operations.ts",
+    "src/types",
+    "src/errors",
+    "src/operationDefinitions",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "bun src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "^9.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-perfectionist": "^2.11.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

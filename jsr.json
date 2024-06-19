@@ -1,0 +1,12 @@
+{
+  "name": "@mapokapo/leo-lang",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./src/mod.ts",
+    "./machine": "./src/machine.ts",
+    "./operations": "./src/operations.ts",
+    "./operationDefinitions": "./src/operations/index.ts",
+    "./types": "./src/types/index.ts",
+    "./errors": "./src/errors/index.ts"
+  }
+}
