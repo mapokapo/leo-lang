@@ -5,7 +5,7 @@
     ".": "./src/mod.ts",
     "./machine": "./src/Machine.ts",
     "./operations": "./src/operations.ts",
-    "./operationDefinitions": "./src/operations/index.ts",
+    "./operationDefinitions": "./src/operationDefinitions/index.ts",
     "./types": "./src/types/index.ts",
     "./errors": "./src/errors/index.ts"
   }
